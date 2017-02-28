@@ -112,5 +112,67 @@
   }
 
 ```
+
+## Tu necesidad es otra 
+
+``` necesitas varios pokemons a la vez en una sola instancia ```
+
+
+#### Utilizando la pokeclass como multi-hilos 
+```js
+
+  //creamos una instancia padre
+  var pokemon_ = new pokemon();
+
+  /*
+   * Este codigo es vacil del programador , asi que no necesariamente 
+   *  lleva este patron 
+  */
   
+  //todos los pokemons que quiero llamar de la pokeapi 
+  // en este caso me limitare con tres pero pueden ser "N" pokemons 
+  var my_pokemons 		= [1,10,20];
+  var my_results      = [];
+  //ejecutemoslo 
+  
+  
+  pokemon_.execMultiPokemons(my_pokemons , function(result){
+	     my_results.push(
+        {
+          sprite : poke.sprite_image(),
+		      name   : poke.pokeName()
+        }
+       );
+  });
+  
+  
+  //el primer parametro es el arreglo de pokemons a llamar
+  // el segundo parametro es la funcion callback que se ejecutara 
+   
+ 
+ 
+```
+
+## Una funcion para cada pokemon 
+
+    Pero que tal si deseas ejecutar un callback para pokemon llamado 
+    asi que tomemos el codigo anterior y modifiquemos el multi-hilo
+
+```js
+
+  //creamos una matriz de funciones 
+  var callbacks = [
+      function(result) { //  haz algo  },
+      function(result) { //  algo mas distinto },
+      function(result) { //  tu puedes sobresalir  }
+  ];
+  
+  
+  pokemon_.execMultiPokemons(my_pokemons , callbacks);
+  
+  
+
+```
+
+
 
