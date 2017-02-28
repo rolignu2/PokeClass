@@ -174,5 +174,17 @@
 
 ```
 
+## Advertencia 
+
+	 >	Esta clase no esta del 100% terminada , la desarrolle porque estaba aburrido   
+	 >	Si alguien desea darle continuacion sea bienvenido 
+	 >	La documentacion final de esta clase esta sujeta a ponerse cuando tenga ganas 
 
 
+##Documentacion 
+
+	MUY PRONTO LA DOCUMENTACION FINAL 
+	
+##Licencia 
+
+	Esta clase esta bajo la licencia MIT.
